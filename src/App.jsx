@@ -1,26 +1,33 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import './App.css'
 
-import {BrowserRouter as Router, Routes , Route} from 'react-router-dom'
-import Nav from './components/Nav'
+import { Outlet } from 'react-router-dom';
+import Nav from './pages/Nav'
 import Banner from './components/Banner'
-import About from './components/About'
-import Footer from './components/Footer'
-import CardProduct from './components/product/CardProduct'
+import Footer from './pages/Footer'
+import Preload from './pages/Preload'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [screenLoading, setScreenLoading] = useState(false);
+  useEffect(() => {
+    setScreenLoading(true);
+    setTimeout(() => {
+      setScreenLoading(false);
+    }, 1000);
+  }, []);
   return (
-    <Router>
-      <Nav />
-      <Banner/>
-      <Routes>
-        <Route path='/' element={<CardProduct />} />
-        <Route path='/about' element={<About/>}/>
-      </Routes>
-      <Footer/>
-    </Router>
+    <>
+    {screenLoading ? (
+      <Preload />
+    ) : (
+      <>
+        <Nav />
+        <Banner />
+        <Outlet /> 
+        <Footer />
+      </>
+    )}
+  </>
   )
 }
 
