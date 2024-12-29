@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CardProductSlide from './CardProductSlide';
 import star from '../../assets/icons/star.svg'
-import CardProductNew from "./CardProductNew.jsx";
+import starHalf from '../../assets/icons/star-half.svg'
+
 
 function CartProduct() {
   const products = [
@@ -60,59 +62,56 @@ function CartProduct() {
           <h1 className="font-bold text-4xl mb-4">DEMO Product card </h1>
           <h1 className="text-3xl">Tailwind CSS</h1>
       </div>
-      <CardProductNew />
+      <CardProductSlide/>
       {/* Grid Section - Starts Here */}
       <section className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
         {products.map((product) => (
-          <div className="w-72 bg-white shadow-md rounded-xl duration-500 group animate-slide-fade">{/* hover:scale-105 hover:shadow-xl hover:animate-fadeInUp */}
-            <Link to={`/product/${product.id}`}>
-            <div className="relative overflow-hidden">
-              <img src={product.img} alt="Product" className="h-80 w-72 object-cover rounded-t-xl"/>
-              <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <button className="bg-black text-white py-2 px-5">Add to cart</button>
+          <div className="card">
+            <button class="transition ease-in duration-300 bg-gray-800  hover:text-purple-500 shadow hover:shadow-md text-gray-500 rounded-full w-8 h-8 text-center p-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg></button>
+            <img src={product.img} alt="" className="w-full h-full object-cover"/>
+            <div className="p-5 flex flex-col gap-3">
+              {/* badge */}
+              <div className="flex items-center gap-2">
+                <span className="badge">{product.brand}</span>
+                <span className="badge">official store</span>
+              </div>
+
+              {/* product title */}
+              <h2 className="product-title" title="Best Headephone Ever">
+                {product.name}
+              </h2>
+
+              {/* product price */}
+              <div>
+                <span className="text-xl font-bold">{product.price}</span>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-sm line-through opacity-50">{product.priceOld}</span>
+                  <span className="discount-percent">Save 20%</span>
+                </div>
+              </div>
+
+              {/* product rating */}
+              <span className="flex items-center mt-1">
+                  <img src={star} alt=""/>
+                  <img src={star} alt=""/>
+                  <img src={star} alt=""/>
+                  {/* <img src={starHalf} alt=""/> */}
+                  <span className="text-xs ml-2 text-gray-500">20k reviews</span>
+              </span>
+
+              {/* product action button */}
+              <div className="mt-5 flex gap-2">
+                <button className="button-primary">Add to cart</button>
               </div>
             </div>
-              <div className="px-4 py-3 w-72">
-                <div className="flex items-center gap-2">
-                  <span className="badge">{product.brand}</span>
-                  <span className="badge">official store</span>
-                </div>
-               
-                <h2 className="product-title pt-2" title="Best Headephone Ever">
-                  {product.name}
-                </h2>
-                <div className="flex items-center">
-                  <p className="text-lg font-semibold text-black cursor-auto my-3">
-                    {product.price}
-                  </p>
-                  <del>
-                    <p className="text-sm text-gray-600 cursor-auto ml-2">
-                      {product.priceOld}
-                    </p>
-                  </del>
-                  <div className="flex items-center pl-4">
-                    <img src={star} alt=""/>
-                    <img src={star} alt=""/>
-                    <img src={star} alt=""/>
-                    <span className="text-xs ml-2 text-gray-500">20k reviews</span>
-                  </div>
-                  <div className="ml-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-bag-plus" viewBox="0 0 16 16">
-                      <path fillRule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
-                      <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </Link>
           </div>
         ))}
       </section>
-      
       {/* Grid Section - Ends Here */}
     </div>
   );
 }
 
 export default CartProduct;
-

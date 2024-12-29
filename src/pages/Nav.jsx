@@ -8,13 +8,13 @@ function Nav(){
     }
 
     return(
-        <nav className="bg-slate-800 p-4">
-            <div className="flex items-center justify-between">
-                <div className="text-white text-2xl font-bold"><Link  to="/ecomshop">Ecommerce</Link> </div>
+        <nav className="bg-gray-100 p-2 sticky top-0 z-10">
+            <div className="max-w-6xl mx-auto px-4 flex items-center justify-between uppercase">
+                <div className=" text-2xl font-bold"><Link  to="/ecomshop">Name Ecommerce</Link> </div>
 
                 {/* Toggle Menu Button */}
                 <div className="md:hidden">
-                    <button id="menu-toggle" className="text-white" onClick={toggleMenu}>
+                    <button id="menu-toggle" className="" onClick={toggleMenu}>
                         <svg 
                             fill="none" 
                             stroke="currentColor" 
@@ -29,10 +29,17 @@ function Nav(){
                     </button>
                 </div>
                 <ul className="hidden md:flex space-x-4">
+                    <li className="mt-2"><Link to="/ecomshop" className="">Home</Link></li>
+                    <li className="mt-2"><Link to="/ecomshop/about" className="">About</Link></li>
+                    {/* <li className="mt-2"><Link to="/ecomshop/services" className="">Services</Link></li> */}
+                    <li className="mt-2"><Link to="/ecomshop/contact" className="">Contact</Link></li>
+                    <li className="mt-2"><Link to="/ecomshop/Dashboad" className="">Dashboad</Link></li>
+                    <li className="mt-2"><Link>Login</Link></li>
+                    <a href="#" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signup</a>
                     <li>
                         <Link to="/basket">
                             <div className="flex justify-center items-center">
-                                <div className="relative py-2 text-white">
+                                <div className="relative py-2 ">
                                     <div className="absolute right-0 left-3 top-px flex justify-center items-center bg-red-500 text-white rounded-full h-5 w-5 text-xs">
                                         3 
                                     </div>
@@ -43,21 +50,18 @@ function Nav(){
                             </div>
                         </Link>
                     </li>
-                    <li className="mt-2"><Link to="/ecomshop" className="text-white">Home</Link></li>
-                    <li className="mt-2"><Link to="/about" className="text-white">About</Link></li>
-                    <li className="mt-2"><Link to="/services" className="text-white">Services</Link></li>
-                    <li className="mt-2"><Link to="/contact" className="text-white">Contact</Link></li>
-                    <li className="mt-2"><Link to="/Dashboad" className="text-white">Dashboad</Link></li>
                 </ul>
             </div>
 
             {/* moblie nav */}
             {isMenuOpen ? (
                 <ul className="flex-col md:hidden">
-                     <li className="py-3"><Link to="/ecomshop" className="text-white">Home</Link></li>
-                    <li className="py-3"><Link to="/about" className="text-white">About</Link></li>
-                    <li className="py-3"><Link to="/services" className="text-white">Services</Link></li>
-                    <li className="py-3"><Link to="/contact" className="text-white">Contact</Link></li>
+                     <li className="py-3"><Link to="/ecomshop" className="">Home</Link></li>
+                    <li className="py-3"><Link to="/ecomshop/about" className="">About</Link></li>
+                    <li className="py-3"><Link to="/ecomshop/contact" className="">Contact</Link></li>
+                    {/* <li className="py-3"><Link to="/ecomshop/services" className="">Services</Link></li> */}
+                    <li className="py-3"><Link to="/ecomshop/Dashboad" className="">Dashboad</Link></li>
+                    <a href="#" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signup</a>
                 </ul>
             ):null}
            

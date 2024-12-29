@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .card{
+        @apply
+            bg-white text-gray-700 
+            w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden
+    }
+
+    .badge{
+        @apply
+            px-3 py-1 rounded-full text-xs bg-gray-300
+    }
+
+    .product-title{
+        @apply
+            font-semibold text-2xl
+            overflow-ellipsis overflow-hidden whitespace-nowrap
+    }
+
+    .discount-percent{
+        @apply
+            bg-green-400
+            px-1.5 py-0.5 rounded-md
+            text-xs text-white
+    }
+}
+
+@layer utilities {
+    @keyframes slide-fade-up {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    .animate-slide-fade {
+      opacity: 0;
+      animation: slide-fade-up 0.5s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .animate-fadeIn {
+      animation: fadeIn 2s ease-in forwards;
+    }
+}

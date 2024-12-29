@@ -3,9 +3,11 @@ import './App.css'
 
 import { Outlet } from 'react-router-dom';
 import Nav from './pages/Nav'
-import Banner from './components/Banner'
+import Banner from './components/shopping/Banner'
 import Footer from './pages/Footer'
 import Preload from './pages/Preload'
+import NewsPage from "./components/shopping/news/newsPage";
+
 
 function App() {
   const [screenLoading, setScreenLoading] = useState(false);
@@ -17,17 +19,18 @@ function App() {
   }, []);
   return (
     <>
-    {screenLoading ? (
-      <Preload />
-    ) : (
-      <>
-        <Nav />
-        <Banner />
-        <Outlet /> 
-        <Footer />
-      </>
-    )}
-  </>
+      {screenLoading ? (
+        <Preload />
+      ) : (
+        <>
+          <Nav/>
+          <Banner/>
+          <Outlet/> 
+          <NewsPage />
+          <Footer/>
+        </>
+      )}
+    </>
   )
 }
 
