@@ -34,7 +34,8 @@ function Nav(){
                     {/* <li className="mt-2"><Link to="/ecomshop/services" className="">Services</Link></li> */}
                     <li className="mt-2"><Link to="/ecomshop/contact" className="">Contact</Link></li>
                     <li className="mt-2"><Link to="/ecomshop/Dashboad" className="">Dashboad</Link></li>
-                    <li className="mt-2"><Link>Login</Link></li>
+                    <li className="mt-2"><Link to="/ecomshop/login">Login</Link></li>
+                    {/* <li className="mt-2"><Link to="/auth/login">Login</Link></li> */}
                     <a href="#" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signup</a>
                     <li>
                         <Link to="/basket">
