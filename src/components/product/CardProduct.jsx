@@ -60,12 +60,17 @@ function CartProduct() {
           <h1 className="font-bold text-4xl mb-4">DEMO Product card </h1>
           <h1 className="text-3xl">Tailwind CSS</h1>
       </div>
+
       <CardProductNew />
+
+      <div className="text-center p-10">
+          <h1 className="font-bold text-4xl mb-4">Product List </h1>
+      </div>
       {/* Grid Section - Starts Here */}
       <section className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
         {products.map((product) => (
           <div className="w-72 bg-white shadow-md rounded-xl duration-500 group animate-slide-fade">{/* hover:scale-105 hover:shadow-xl hover:animate-fadeInUp */}
-            <Link to={`/product/${product.id}`}>
+            <Link to={`/ecomshop/product/${product.id}`}>
             <div className="relative overflow-hidden">
               <img src={product.img} alt="Product" className="h-80 w-72 object-cover rounded-t-xl"/>
               <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
