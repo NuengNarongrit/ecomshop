@@ -56,15 +56,12 @@ function CartProduct() {
   ];
   return (
     <div>
-      <div className="text-center p-10">
+      {/* <div className="text-center p-10">
           <h1 className="font-bold text-4xl mb-4">DEMO Product card </h1>
           <h1 className="text-3xl">Tailwind CSS</h1>
-      </div>
-
-      <CardProductNew />
-
+      </div> */}
       <div className="text-center p-10">
-          <h1 className="font-bold text-4xl mb-4">Product List </h1>
+          <h1 className="font-bold text-4xl mb-4">DEMO Product List </h1>
       </div>
       {/* Grid Section - Starts Here */}
       <section className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
@@ -113,6 +110,7 @@ function CartProduct() {
           </div>
         ))}
       </section>
+      <CardProductNew />
       
       {/* Grid Section - Ends Here */}
     </div>
