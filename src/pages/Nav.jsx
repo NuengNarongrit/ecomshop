@@ -7,7 +7,7 @@ function Nav(){
         setIsMenuOpen(!isMenuOpen) //!false == true
     }
     return(
-        <nav className="bg-white p-2 sticky top-0 z-10 uppercase">
+        <nav className="bg-white p-2 sticky top-0 z-50 uppercase">
             <div className="mx-auto max-w-5xl flex justify-between items-center px-4">{/*  */}
                 <div className="text-2xl font-bold">
                     <Link to="/ecomshop">Name Ecommerce</Link>
@@ -25,7 +25,7 @@ function Nav(){
                 {/* Navigation Links */}
                 <div className={`fixed top-12 right-0 h-[calc(100vh-3.5rem)] w-0 overflow-hidden bg-gray-100 transition-all duration-300 py-4 md:px-4 md:static md:flex md:h-auto md:w-auto md:items-center md:bg-transparent ${isMenuOpen ? "w-64 px-7 " : ""}`}>
                     <ul className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
-                        <li><Link to="/ecomshop" className="text-gray-700 hover:text-gray-900">Home</Link></li>
+                        <li><Link to="/ecomshop/" className="text-gray-700 hover:text-gray-900">Home</Link></li>
                         <li><Link to="/ecomshop/about" className="text-gray-700 hover:text-gray-900">About</Link></li>
                         <li><Link to="/ecomshop/contact" className="text-gray-700 hover:text-gray-900">Contact</Link></li>
                         <li><Link to="/ecomshop/Dashboad" className="text-gray-700 hover:text-gray-900">Dashboad</Link></li>

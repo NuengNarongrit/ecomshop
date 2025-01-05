@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FormContact(){
     return(
-        <div className="card h-fit max-w-6xl p-5 md:p-12">
+        <div className="bg-white h-fit max-w-xl p-5 md:p-12">
             <h2 className="mb-4 text-2xl font-bold dark:text-white">Ready to Get Started?</h2>
             <form action="">
                 <div className="mb-6">

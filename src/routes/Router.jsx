@@ -1,10 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import CardProduct from '../components/product/CardProduct';
+import CardProduct from '../components/shopping/product/CardProduct';
 import About from '../components/shopping/about/About';
-import CardProductDetail from '../components/product/CardProductDetail';
-import CardBasket from '../components/product/CardBasket';
+import CardProductDetail from '../components/shopping/product/CardProductDetail';
+import CardBasket from '../components/shopping/product/CardBasket';
 import ContactPage from '../components/shopping/contact/ContactPage';
+import HeroProduct from "../components/shopping/partials/HeroProduct";
+
 
 import MainLayout from '../layouts/MainLayout ';
 import AuthLayout  from '../layouts/AuthLayout';
