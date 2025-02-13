@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import './App.css'
 
 import { Outlet } from 'react-router-dom';
-import Nav from './pages/Nav'
+import Nav from './pages/Navbar/Nav'
 import Banner from './components/shopping/Banner'
 import Footer from './pages/Footer'
 import Preload from './pages/Preload'

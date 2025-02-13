@@ -4,8 +4,9 @@ import Herohome from './partials/Herohome'
 function Banner() {
   return (
     <>
-    <Herohome/>
+    {/* <Herohome/> */}
     </>
   )
 }
 export default Banner
+

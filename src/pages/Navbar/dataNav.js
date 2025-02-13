@@ -1,0 +1,21 @@
+export const NavbarMenu = [
+    {
+        id:1,
+        title:"Home",
+        link:"/ecomshop/",
+    },{
+        id:2,
+        title:"About",
+        link:"/ecomshop/about",
+    },
+    {
+        id:3,
+        title:"Contact",
+        link:"/ecomshop/contact",
+    },
+    {
+        id:4,
+        title:"Dashboad",
+        link:"/ecomshop/dashboad"
+    }
+] 

@@ -1,44 +1,18 @@
-import React, { useState,useEffect } from 'react'
-// import Modal from '../utils/Modal';
-
+import React from 'react'
 
 export default function Herohome() {
   return (
-    <section className="relative">
-      {/* Illustration behind hero content */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none" aria-hidden="true">
-        <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            {/* <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
-                <stop stopColor="#4FD1C5" offset="0%" />
-                <stop stopColor="#81E6D9" offset="25.871%" />
-                <stop stopColor="#338CF5" offset="100%" />
-            </linearGradient> */}
-            <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
-              <stop stopColor="#FF6F61" offset="0%" /> {/* สีแดงอ่อน */}
-              <stop stopColor="#FF4C4C" offset="50%" /> {/* สีแดงสด */}
-              <stop stopColor="#C62828" offset="100%" /> {/* สีแดงเข้ม */}
-          </linearGradient>
-          </defs>
-          <g fill="url(#illustration-01)" fillRule="evenodd">
-            <circle cx="1232" cy="128" r="128" />
-            <circle cx="155" cy="443" r="64" />
-          </g>
-        </svg>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-          {/* Section header */}
-          <div className="text-center pb-12 md:pb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out" >DEMO Website <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-400">Ecommerce</span></h1>
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur consequuntur cumque voluptatum repellendus officiis cum adipisci, necessitatibus explicabo saepe rerum ipsam autem temporibus quas, facilis repellat. Beatae vitae magnam officia.</p>
-            </div>
-          </div>
+    <div className='w-full h-screen mb-4'>
+      <img className='top-0 left-0 w-full h-screen object-cover' src="./images/banner-3.png" alt="" />
+      <div className="bg-black/30 absolute top-0 left-0 w-full h-screen"/>
+      <div className='absolute top-0 w-full h-full flex flex-col justify-center text-white'>
+        <div className='md:left-[10%] max-w-[1100px] m-auto absolute p-4'>
+          <p>DEMO</p>
+          <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl'>Ecommerce Shop</h1>
+          <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti quibusdam vel repellendus fuga aliquid magnam dicta veritatis nam minus.</p>
+          <button className='button-1 bg-white text-black '>Reserve Now</button>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
